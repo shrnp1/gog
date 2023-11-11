@@ -34,7 +34,7 @@ local maps = game:GetService("Workspace").Map
 
 local questNames = { -- aaaa my fingers
     "Thief Boss",
-    "Sell Tier 2"
+    "Sell Tier 2",
     "Witch",
     "Yeti",
     "Bear Minion",
