@@ -216,8 +216,6 @@ function getquest(quest)
         questRemoteEvents:WaitForChild("Events"):FireServer(1)   
     elseif quest == "Witch" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1)    
-    elseif quest == "Sell Tier 2" then
-        questRemoteEvents:WaitForChild("Events"):FireServer(1)    
     elseif quest == "Desert Bandit" then
         questRemoteEvents:WaitForChild("DefeatDesertBandits"):FireServer(1)
     elseif quest == "Ajax Follower" then
