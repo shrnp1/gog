@@ -204,6 +204,8 @@ function getquest(quest)
         questRemoteEvents:WaitForChild("PHQ15"):FireServer(1)
     elseif quest == "Boku Black" then
         questRemoteEvents:WaitForChild("PHQ16"):FireServer(1)
+    elseif quest == "Yeti" then
+        questRemoteEvents:WaitForChild("ReportedSightings"):FireServer(unpack(args))        
     elseif quest == "Desert Bandit" then
         questRemoteEvents:WaitForChild("DefeatDesertBandits"):FireServer(1)
     elseif quest == "Ajax Follower" then
