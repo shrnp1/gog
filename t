@@ -74,13 +74,11 @@ local questNames = { -- aaaa my fingers
     "General Saibaman",
     "Demons",
     "Resurrected Villain"
-    "Turles"
 }
 
 local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Island", "Galactic Patrol Island", "Power Tower Island", "Rad Ribbon Island", "Squid Town", "Tree Island", "Destroyed City", "East City"}
 
 local mobPositions = {
-    ["Turles"] = Vector3.new(-2753.251708984375, 1470.416748046875, -6144.50830078125),
     ["Ape"] = Vector3.new(-1883.9521484375, 387.333984375, -10719.310546875),
     ["Rogue Experiments"] = Vector3.new(-1479.063232421875, 447.49615478515625, -2792.845458984375),
     ["Bear Minion"] = Vector3.new(-1216.9674072265625, 452.69580078125, -2704.2802734375),
