@@ -34,6 +34,7 @@ local maps = game:GetService("Workspace").Map
 
 local questNames = { -- aaaa my fingers
     "Thief Boss",
+    "Sell Tier 2"
     "Witch",
     "Yeti",
     "Bear Minion",
@@ -86,6 +87,7 @@ local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Islan
 local mobPositions = {
     ["Turles"] = Vector3.new(-2765.829345703125, 1466.254638671875, -6175.0419921875),
     ["Nappa"] = Vector3.new(-1070.86376953125, 420.6603698730469, 4223.263671875),
+    ["Sell Tier 2"] = Vector3.new(-6080.5576171875, 2335.493408203125, 8781.01953125),
     ["Yeti"] = Vector3.new(-4889.08447265625, 683.5237426757812, -95.19535827636719),
     ["Witch"] = Vector3.new(1066.06201171875, 626.2180786132812, 1039.60400390625),
     ["Ape"] = Vector3.new(-1883.9521484375, 387.333984375, -10719.310546875),
@@ -213,7 +215,9 @@ function getquest(quest)
     elseif quest == "Nappa" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1)   
     elseif quest == "Witch" then
-        questRemoteEvents:WaitForChild("Events"):FireServer(1)       
+        questRemoteEvents:WaitForChild("Events"):FireServer(1)    
+    elseif quest == "Sell Tier 2" then
+        questRemoteEvents:WaitForChild("Events"):FireServer(1)    
     elseif quest == "Desert Bandit" then
         questRemoteEvents:WaitForChild("DefeatDesertBandits"):FireServer(1)
     elseif quest == "Ajax Follower" then
@@ -408,7 +412,7 @@ end)
 
 --] Level Dropdowns [--
 
-local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Nappa", "Yeti", "Witch", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
+local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Nappa", "Yeti", "Witch", "Sell Tier 2", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
     mob = newmobxd
 end)
 
