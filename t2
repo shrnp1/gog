@@ -75,7 +75,7 @@ local questNames = { -- aaaa my fingers
     "General Saibaman",
     "Demons",
     "Resurrected Villain"
-    "Turles"
+    
 }
 
 local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Island", "Galactic Patrol Island", "Power Tower Island", "Rad Ribbon Island", "Squid Town", "Tree Island", "Destroyed City", "East City"}
