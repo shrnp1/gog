@@ -34,6 +34,7 @@ local maps = game:GetService("Workspace").Map
 
 local questNames = { -- aaaa my fingers
     "Thief Boss",
+    "Yeti",
     "Bear Minion",
     "Bear King",
     "Alien",
@@ -62,6 +63,7 @@ local questNames = { -- aaaa my fingers
     "Corrupted Kai",
     "Robert",
     "Boku Black",
+    "Turles",
     "Desert Bandit",
     "Ajax Follower",
     "Ghost",
@@ -74,11 +76,14 @@ local questNames = { -- aaaa my fingers
     "General Saibaman",
     "Demons",
     "Resurrected Villain"
+    
 }
 
 local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Island", "Galactic Patrol Island", "Power Tower Island", "Rad Ribbon Island", "Squid Town", "Tree Island", "Destroyed City", "East City"}
 
 local mobPositions = {
+    ["Turles"] = Vector3.new(-2765.829345703125, 1466.254638671875, -6175.0419921875),
+    ["Yeti"] = Vector3.new(-4889.08447265625, 683.5237426757812, -95.19535827636719),
     ["Ape"] = Vector3.new(-1883.9521484375, 387.333984375, -10719.310546875),
     ["Rogue Experiments"] = Vector3.new(-1479.063232421875, 447.49615478515625, -2792.845458984375),
     ["Bear Minion"] = Vector3.new(-1216.9674072265625, 452.69580078125, -2704.2802734375),
@@ -393,7 +398,7 @@ end)
 
 --] Level Dropdowns [--
 
-local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
+local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
     mob = newmobxd
 end)
 
