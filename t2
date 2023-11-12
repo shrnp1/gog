@@ -2518,7 +2518,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
 
             function Elements:CreateKeybind(Name, Key, Callback)
                 local Name = Name or 'Keybind'
-                local Key = Key or 'E'
+                local Key = Key or 'j'
                 local Callback = Callback or function() end
                 local Current = Key
                 local KeybindFunctions = {}
