@@ -2518,7 +2518,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
 
             function Elements:CreateKeybind(Name, Key, Callback)
                 local Name = Name or 'Keybind'
-                local Key = Key or 'j'
+                local Key = Key or 'E'
                 local Callback = Callback or function() end
                 local Current = Key
                 local KeybindFunctions = {}
@@ -3782,7 +3782,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                         BackgroundColor3 = Theme.PrimaryElementColor,
                         BackgroundTransparency = 1,
                         BorderSizePixel = 0,
-                        Position = UDim2.new(6, 6, 6, 6),
+                        Position = UDim2.new(0, 0, 0, 0),
                         Size = UDim2.new(0, 410, 0, 40),
                         Font = Enum.Font.SourceSans,
                         Text = '',
