@@ -3782,7 +3782,7 @@ function Library:CreateWindow(HubName, GameName, IntroText, IntroIcon, ImprovePe
                         BackgroundColor3 = Theme.PrimaryElementColor,
                         BackgroundTransparency = 1,
                         BorderSizePixel = 0,
-                        Position = UDim2.new(0, 0, 0, 0),
+                        Position = UDim2.new(6, 6, 6, 6),
                         Size = UDim2.new(0, 410, 0, 40),
                         Font = Enum.Font.SourceSans,
                         Text = '',
