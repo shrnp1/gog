@@ -35,6 +35,7 @@ local maps = game:GetService("Workspace").Map
 local questNames = { -- aaaa my fingers
     "Thief Boss",
     "Sell Tier 2",
+    "Sell Tier 3 SP",
     "Witch",
     "Yeti",
     "Bear Minion",
@@ -86,6 +87,7 @@ local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Islan
 
 local mobPositions = {
     ["Turles"] = Vector3.new(-2765.829345703125, 1466.254638671875, -6175.0419921875),
+    ["Sell Tier 3 SP"] = Vector3.new(-6850.21435546875, 466.6564636230469, -15981.6875),
     ["Nappa"] = Vector3.new(-1070.86376953125, 420.6603698730469, 4223.263671875),
     ["Sell Tier 2"] = Vector3.new(-6080.5576171875, 2335.493408203125, 8781.01953125),
     ["Yeti"] = Vector3.new(-4889.08447265625, 683.5237426757812, -95.19535827636719),
@@ -217,7 +219,9 @@ function getquest(quest)
     elseif quest == "Witch" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1)
     elseif quest == "Sell Tier 2" then
-        questRemoteEvents:WaitForChild("Events"):FireServer(1)     
+        questRemoteEvents:WaitForChild("Events"):FireServer(1)    
+    elseif quest == "Sell Tier 3 SP" then
+        questRemoteEvents:WaitForChild("Events"):FireServer(1)   
     elseif quest == "Desert Bandit" then
         questRemoteEvents:WaitForChild("DefeatDesertBandits"):FireServer(1)
     elseif quest == "Ajax Follower" then
