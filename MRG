@@ -18,7 +18,7 @@ local PlaceId = game.PlaceId
 --] Extra Locals [--
 local farm = false
 local doingquest = false
-local mob = "Thief Boss" -- mob selected in dropdown
+local mob = "Ape" -- mob selected in dropdown
 local npcs_folder = workspace.Main.Live -- folder
 local selectednpc = nil -- it will be the 'model'
 local selectedmob = nil
