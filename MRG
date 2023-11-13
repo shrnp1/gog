@@ -36,6 +36,7 @@ local ffarm = false
 
 local questNames = { -- aaaa my fingers
     "Thief Boss",
+    "Kataba",
     "Sell Tier 2",
     "Sell Tier 3 SP",
     "Witch",
@@ -89,6 +90,7 @@ local islandNames = {"Jungle Island", "Great Ape Westeland", "Great Plains Islan
 
 local mobPositions = {
     ["Turles"] = Vector3.new(-2765.829345703125, 1466.254638671875, -6175.0419921875),
+    ["Kataba"] = Vector3.new(-12319.763671875, 487.8753662109375, 9369.154296875),
     ["Sell Tier 3 SP"] = Vector3.new(-6850.21435546875, 466.6564636230469, -15981.6875),
     ["Nappa"] = Vector3.new(-1070.86376953125, 420.6603698730469, 4223.263671875),
     ["Sell Tier 2"] = Vector3.new(-6080.5576171875, 2335.493408203125, 8781.01953125),
@@ -216,6 +218,8 @@ function getquest(quest)
         questRemoteEvents:WaitForChild("PHQ16"):FireServer(1)
     elseif quest == "Yeti" then
         questRemoteEvents:WaitForChild("ReportedSightings"):FireServer(1)
+    elseif quest == "Kataba" then
+        questRemoteEvents:WaitForChild("FR3_S2"):FireServer(1)
     elseif quest == "Nappa" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1)   
     elseif quest == "Witch" then
@@ -420,7 +424,7 @@ end)
 
 --] Level Dropdowns [--
 
-local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Nappa", "Yeti", "Witch", "Sell Tier 2", "Sell Tier 3 SP", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
+local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Kataba", "Nappa", "Yeti", "Witch", "Sell Tier 2", "Sell Tier 3 SP", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
     mob = newmobxd
 end)
 
