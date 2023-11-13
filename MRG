@@ -18,7 +18,7 @@ local PlaceId = game.PlaceId
 --] Extra Locals [--
 local farm = false
 local doingquest = false
-local mob = "Ape" -- mob selected in dropdown
+local mob = "Thief Boss" -- mob selected in dropdown
 local npcs_folder = workspace.Main.Live -- folder
 local selectednpc = nil -- it will be the 'model'
 local selectedmob = nil
@@ -31,6 +31,8 @@ local amount = 1
 local doingloot = false
 local selectedloot = nil
 local maps = game:GetService("Workspace").Map
+local ffarm = false
+
 
 local questNames = { -- aaaa my fingers
     "Thief Boss",
@@ -344,9 +346,7 @@ end
 
 --] Tabs [--
 
-local Home = Window:CreateTab('Home', true, 'rbxassetid://0', Vector2.new(484, 44), Vector2.new(36, 36))
-
-local Farm = Window:CreateTab('FASTFarm', true, 'rbxassetid://0', Vector2.new(484, 44), Vector2.new(36, 36))
+local fFarm = Window:CreateTab('Farm', true, 'rbxassetid://0', Vector2.new(484, 44), Vector2.new(36, 36))
 
 local Farm = Window:CreateTab('Farm', true, 'rbxassetid://0', Vector2.new(484, 44), Vector2.new(36, 36))
 
@@ -359,6 +359,8 @@ local Misc = Window:CreateTab('Misc', true, 'rbxassetid://0', Vector2.new(484, 4
 local Settings = Window:CreateTab('Settings', true, 'rbxassetid://0', Vector2.new(484, 44), Vector2.new(36, 36))
 
 --] Sections [--
+
+local Level = fFarm:CreateSection('Level fFarm')
 
 local Level = Farm:CreateSection('Level Farm')
 
@@ -423,8 +425,8 @@ local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles"
 end)
 
 -- Toggles [--
---FAST FARM [--
-local Toggle_Farm = Level:CreateToggle('Fast Farm (OP)', false, Color3.fromRGB(0, 125, 255), 0.25, function(newvalue)
+
+local Toggle_fFarm = Level:CreateToggle('Fast Farm (OP)', false, Color3.fromRGB(0, 125, 255), 0.25, function(newvalue)
     farm = newvalue
     if farm == true then
         Library:CreateNotification('Warn', 'Wait some time..', 5)
@@ -438,7 +440,7 @@ wait()
 
     ohNumber1 = ohNumber1 + 1
 
-    if ohNumber1 > 920 then
+    if ohNumber1 > 9920 then
         wait(1)
         ohNumber1 = 1
     end
@@ -446,7 +448,7 @@ wait()
 end
 
 end)
---FAST FARM--
+
 local Proximity = Useful:CreateToggle('Loot Aura', false, Color3.fromRGB(0, 125, 255), 0.25, function(valuee5)
     while valuee5 do
         local player = game.Players.LocalPlayer
