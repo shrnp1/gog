@@ -347,7 +347,7 @@ do
                     BackgroundColor3 = Theme.BackgroundColor,
                     BorderSizePixel = 0,
                     Position = UDim2.new(1, 300, 1, -30),
-                    Size = UDim2.new(0, 300, 0, 50),
+                    Size = UDim2.new(0, 100, 0, 25),
                     BackgroundTransparency = NotificationTransparency,
                     AnchorPoint = Vector2.new(1, 1)
                 }, {
