@@ -280,7 +280,7 @@ do
         end
         
         Frame.InputBegan:Connect(function(Input)
-            if Input.UserInputType == Enum.UserInputType.Touch then
+            if Input.UserInputType == Enum.UserInputType.MouseButton1 then
                 Dragging = true
                 DragStart = Input.Position
                 StartPosition = Frame.Position
@@ -346,8 +346,8 @@ do
                     Name = 'Notification'..tostring(Amount + 1),
                     BackgroundColor3 = Theme.BackgroundColor,
                     BorderSizePixel = 0,
-                    Position = UDim2.new(1, 100, 1, -30),
-                    Size = UDim2.new(0, 100, 0, 25),
+                    Position = UDim2.new(1, 300, 1, -30),
+                    Size = UDim2.new(0, 150, 0, 25),
                     BackgroundTransparency = NotificationTransparency,
                     AnchorPoint = Vector2.new(1, 1)
                 }, {
