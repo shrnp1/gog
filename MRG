@@ -1,5 +1,5 @@
 --] Boot [--
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SRVRHOLDER/alphax/main/lib.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shrnp1/gog/main/autofarms%20ui"))()
 
 --] Window [--
 local Window = Library:CreateWindow('AlphaX', 'Dragon Soul', 'Welcome to AlphaX!', 'rbxassetid://0', false, 'AlphaX', 'Default')
