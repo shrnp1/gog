@@ -490,7 +490,7 @@ function onBarInput(input)
         local currentPos = offset + lastPos
         if not connections["drag"] then
             connections["drag"] = RunService.RenderStepped:Connect(function()
-                local newPos = UserInputService:GetMouseLocation()
+                local newPos = UserInputService.TouchStarted()
                 if newPos ~= lastPos then
                     local currentX = (offset + newPos).X
                     local currentY = (offset + newPos).Y
