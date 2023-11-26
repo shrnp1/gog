@@ -37,6 +37,7 @@ local ffarm = false
 local questNames = { -- aaaa my fingers
     "Thief Boss",
     "Broly DBZ",
+    "Kale",
     "Broly MP",
     "Kataba",
     "Zuto",
@@ -97,6 +98,7 @@ local mobPositions = {
     ["Kataba"] = Vector3.new(-12319.763671875, 487.8753662109375, 9369.154296875),
     ["Zuto"] = Vector3.new(-13143.998046875, 580.5862426757812, 8843.91015625),
     ["Broly DBZ"] = Vector3.new(-15471.4453125, 6283.7060546875, -6302.00244140625),
+    ["Kale"] = Vector3.new(-15471.4453125, 6283.7060546875, -6302.00244140625),
     ["Broly MP"] = Vector3.new(-14696.3193359375, 696.0938720703125, 10144.4501953125),
     ["Sell Tier 3 SP"] = Vector3.new(-6850.21435546875, 466.6564636230469, -15981.6875),
     ["Sell Tier 3 MP"] = Vector3.new(-6816.06591796875, 498.804931640625, -15971.8671875),
@@ -233,7 +235,9 @@ function getquest(quest)
     elseif quest == "Nappa" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1) 
     elseif quest == "Broly DBZ" then
-        questRemoteEvents:WaitForChild("Events"):FireServer(1)  
+        questRemoteEvents:WaitForChild("Events"):FireServer(1) 
+    elseif quest == "Kale" then
+        questRemoteEvents:WaitForChild("Events"):FireServer(1) 
     elseif quest == "Broly MP" then
         questRemoteEvents:WaitForChild("Events"):FireServer(1) 
     elseif quest == "Witch" then
@@ -440,7 +444,7 @@ end)
 
 --] Level Dropdowns [--
 
-local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Kataba", "Zuto", "Broly DBZ", "Broly MP", "Nappa", "Yeti", "Witch", "Sell Tier 2", "Sell Tier 3 SP", "Sell Tier 3 MP", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
+local Dropdown_Mob = Level:CreateDropdown("Select a Mob", {"nil","Ape", "Turles", "Kataba", "Zuto", "Broly DBZ", "Kale", "Broly MP", "Nappa", "Yeti", "Witch", "Sell Tier 2", "Sell Tier 3 SP", "Sell Tier 3 MP", "Thief", "Thief Boss", "Bear Minion", "Bear King", "Aien", "Rogue Experiments", "Green Saibaman", "Red Saibaman", "Mountain Fighter", "Monster Saibablue", "Evil Namekian", "Martial Artists", "Spopov", "Yam", "Farmer", "Mobster", "Mob Mobster", "Elite Alien", "Funny Guy", "Saibablue", "Mutant Saibaman", "Evil Saiyan", "Postboy Namekian", "Greater Spopov", "Greater Yam", "Evil Majin", "Evil Saiyan", "Prototype Android", "Corrupted Kai", "Robert", "Boku Black", "Desert Bandit", "Ajax Follower" }, "nil", 0.25, function(newmobxd)
     mob = newmobxd
 end)
 
