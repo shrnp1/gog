@@ -1,0 +1,75 @@
+-- npcs folder
+local npcs = workspace.Main.Live
+
+-- set the maximum distance to find NPCs
+local distance = 10
+
+-- initialize the nearest NPC
+local nearestnpc = nil -- npc model
+
+-- toggle for the main loop
+local isfarming = true -- toggle
+
+-- get the VirtualUser service
+local vu = game:GetService("VirtualUser")
+
+-- function to find the nearest NPC
+function findNearestNPC(player) 
+    -- initialize the shortest distance
+    local shortestDistance = math.huge 
+
+    -- initialize the nearest NPC
+    local nearestNPC = nil
+
+    -- loop through all NPCs
+    for _, npc in ipairs(npcs:GetChildren()) do
+        -- check if the NPC is not a player character
+        if not game.Players:GetPlayerFromCharacter(npc) then
+            -- calculate the distance to the NPC
+            local distance = (npc:WaitForChild("HumanoidRootPart").Position - player.Character.PrimaryPart.Position).magnitude
+
+            -- if this distance is shorter than the current shortest distance, update the shortest distance and nearest NPC
+            if distance < shortestDistance then
+                shortestDistance = distance
+                nearestNPC = npc
+                -- you can use 'print(nearestNPC)' to see the selected npc
+            end
+        end
+    end
+
+    -- return the nearest NPC and its distance to the player
+    return nearestNPC, shortestDistance
+end
+
+-- main loop for farming NPCs
+while isfarming do
+    -- find the nearest NPC and its distance to the player
+    local nearestNPC, distance = findNearestNPC(game.Players.LocalPlayer)
+    
+    -- if there is a nearest NPC within range and it's not a player character, attack it
+    if nearestNPC and distance <= 10 and not game.Players:GetPlayerFromCharacter(nearestNPC) then
+
+        -- simulate a mouse click
+        vu:Button1Down(Vector2.new(1000, 1000), workspace.CurrentCamera.CFrame)
+        
+        -- set up attack 
+        local main = {
+            ["Victim"] = nearestNPC,
+            ["Type"] = "Light",
+            ["VictimPosition"] = nearestNPC:WaitForChild("HumanoidRootPart").Position,
+            ["CurrentHeavy"] = 1,
+            ["CurrentLight"] = 1,
+            ["CurrentLightCombo"] = 1,
+            ["LocalInfo"] = {
+                ["Flying"] = false
+            },
+            ["AnimSet"] = "Generic"
+        }
+
+        -- send an attack request
+        game:GetService("ReplicatedStorage").Events.TryAttack:FireServer(main)
+    end
+    
+    -- wait before repeating the loop
+    wait()
+end
