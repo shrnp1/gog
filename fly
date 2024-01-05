@@ -1,0 +1,8 @@
+local args = {
+    [1] = {
+        [1] = true,
+        [2] = "\27"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
