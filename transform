@@ -13,4 +13,5 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
 
 
-wait (5)
+    wait(5) -- without any yielding (waiting), the game will crash
+end
