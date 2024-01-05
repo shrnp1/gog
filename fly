@@ -493,5 +493,4 @@ wait (3)
 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3191.89501953125, 651.3018798828125, 3888.625244140625)}):Play()
 
-end
 
