@@ -1,0 +1,12 @@
+while true do
+
+local args = {
+    [1] = {
+        [1] = "Touch",
+        [2] = "\29"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+
+end
