@@ -1,6 +1,4 @@
-local counter = 0
-
-while counter < 1 do
+while true do
   tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-20786.099609375, 486.92108154296875, 447.2839050292969)}):Play()
 
@@ -89,5 +87,4 @@ wait (3)
 
 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(1363.885986328125, 443.0221252441406, -6808.75439453125)}):Play()
-  counter = counter + 1
 end
