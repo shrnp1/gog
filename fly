@@ -1,5 +1,11 @@
-wait (1)
-do
+while true do
+
+tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-20787.384765625, 8.929866790771484, 429.533935546875)}):Play()
+
+wait (20)
+
+
 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-20786.099609375, 486.92108154296875, 447.2839050292969)}):Play()
 
