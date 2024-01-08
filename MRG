@@ -528,7 +528,7 @@ local Toggle_Lootbox = Useful:CreateToggle('Auto Lootbox', false, Color3.fromRGB
                                 callprompt(idkmodellol.CrateDoor.ProximityPrompt)
 
                                 -- Aguarde 1 segundo antes de teleportar para a próxima caixa de saque
-                                wait(1)
+                                wait(6)
                             end
                         end
                     end
