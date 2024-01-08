@@ -1,6 +1,6 @@
 local counter = 0
 
-while counter < 623452353542345235 do
+while counter < 5 do
   tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1, Enum.EasingStyle.Linear)
 tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-20786.099609375, 486.92108154296875, 447.2839050292969)}):Play()
 
